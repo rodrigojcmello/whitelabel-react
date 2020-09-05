@@ -1,0 +1,47 @@
+body {
+  padding: 32px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  min-width: 120px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+
+  &-accent {
+    background-color: #6200ee;
+  }
+
+  &-default {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #0000001f;
+    background-color: white;
+  }
+
+  &-text {
+    background: none;
+  }
+}
+
+.button--text {
+  font-family: Roboto-Medium, serif;
+  font-size: 14px;
+  letter-spacing: 1.25px;
+  line-height: 16px;
+
+  &-default {
+    color: #6200ee;
+  }
+
+  &-accent {
+    color: #ffffff;
+  }
+
+  &-text {
+    color: #6200ee;
+  }
+}
