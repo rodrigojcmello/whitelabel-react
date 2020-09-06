@@ -25,7 +25,7 @@ type ButtonStatusStyle<T> = {
 
 // Modifier Type ---------------------------------------------------------------
 
-export type ButtonTypeAttribute = 'accent' | 'default' | 'text';
+export type ButtonTypeAttribute = 'base' | 'accent' | 'default' | 'text';
 
 // Modifier Size ---------------------------------------------------------------
 
@@ -60,15 +60,27 @@ interface WhiteLabel<T> {
 const whitelabel: WhiteLabel<Styles> = {
   button: {
     type: {
+      base: {
+        rest: {
+          button: {
+            borderRadius: 4,
+          },
+          text: {
+            textTransform: 'uppercase',
+            fontFamily: 'Roboto-Medium',
+            fontSize: 14,
+            letterSpacing: 1.25,
+            lineHeight: 16,
+          },
+        },
+      },
       accent: {
         rest: {
           button: {
             backgroundColor: '#6200ee',
-            borderRadius: 4,
           },
           text: {
             color: '#FFFFFF',
-            textTransform: 'uppercase',
           },
         },
         hover: {
@@ -78,13 +90,17 @@ const whitelabel: WhiteLabel<Styles> = {
         },
         focus: {},
         pressed: {},
-        disabled: {},
+        disabled: {
+          button: { backgroundColor: '#F8F8F8' },
+          text: {
+            color: '#9A9A9A',
+          },
+        },
       },
       default: {
         rest: {
           button: {
             backgroundColor: '#FFFFFF',
-            borderRadius: 4,
             borderWidth: 1,
             borderStyle: 'solid',
             borderColor: '#0000001f',
@@ -113,24 +129,9 @@ const whitelabel: WhiteLabel<Styles> = {
       },
     },
     size: {
-      small: {
-        rest: {
-          button: {
-            minWidth: 80,
-            height: 24,
-            paddingRight: 16,
-            paddingLeft: 16,
-          },
-          text: {
-            lineHeight: 20,
-            fontSize: 12,
-          },
-        },
-      },
       medium: {
         rest: {
           button: {
-            minWidth: 120,
             height: 36,
             paddingRight: 16,
             paddingLeft: 16,
@@ -138,18 +139,6 @@ const whitelabel: WhiteLabel<Styles> = {
           text: {
             lineHeight: 20,
             fontSize: 14,
-          },
-        },
-      },
-      large: {
-        rest: {
-          button: {
-            minWidth: 200,
-            height: 42,
-          },
-          text: {
-            lineHeight: 20,
-            fontSize: 16,
           },
         },
       },

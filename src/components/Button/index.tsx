@@ -10,6 +10,7 @@ interface ButtonProps {
   text: string;
   type: 'default' | 'accent' | 'text';
   size?: 'small' | 'medium' | 'large';
+  disabled?: boolean;
 }
 
 const sizeExist = whitelabel?.button?.size;
@@ -50,23 +51,29 @@ const StyledButton = styled.button({
   // Type
   // ---------------------------------------------------------------------------
 
+  ...whitelabel?.button?.type?.base?.rest?.button,
+  '&:hover': whitelabel?.button?.type?.base?.hover?.button,
+  '&:focus': whitelabel?.button?.type?.base?.focus?.button,
+  '&:pressed': whitelabel?.button?.type?.base?.pressed?.button,
+  '&.disabled': whitelabel?.button?.type?.base?.disabled?.button,
+
   '&.accent': whitelabel?.button?.type?.accent?.rest?.button,
   '&.accent:hover': whitelabel?.button?.type?.accent?.hover?.button,
   '&.accent:focus': whitelabel?.button?.type?.accent?.focus?.button,
   '&.accent:pressed': whitelabel?.button?.type?.accent?.pressed?.button,
-  '&.accent:disabled': whitelabel?.button?.type?.accent?.disabled?.button,
+  '&.accent.disabled': whitelabel?.button?.type?.accent?.disabled?.button,
 
   '&.default': whitelabel?.button?.type?.default?.rest?.button,
   '&.default:hover': whitelabel?.button?.type?.default?.hover?.button,
   '&.default:focus': whitelabel?.button?.type?.default?.focus?.button,
   '&.default:pressed': whitelabel?.button?.type?.default?.pressed?.button,
-  '&.default:disabled': whitelabel?.button?.type?.default?.disabled?.button,
+  '&.default.disabled': whitelabel?.button?.type?.default?.disabled?.button,
 
   '&.text': whitelabel?.button?.type?.text?.rest?.button,
   '&.text:hover': whitelabel?.button?.type?.text?.hover?.button,
   '&.text:focus': whitelabel?.button?.type?.text?.focus?.button,
   '&.text:pressed': whitelabel?.button?.type?.text?.pressed?.button,
-  '&.text:disabled': whitelabel?.button?.type?.text?.disabled?.button,
+  '&.text.disabled': whitelabel?.button?.type?.text?.disabled?.button,
 
   // ---------------------------------------------------------------------------
   // Size
@@ -92,23 +99,29 @@ const StyledText = styled.span({
   // Type
   // ---------------------------------------------------------------------------
 
+  ...whitelabel?.button?.type?.base?.rest?.text,
+  '&:hover': whitelabel?.button?.type?.base?.hover?.text,
+  '&:focus': whitelabel?.button?.type?.base?.focus?.text,
+  '&:pressed': whitelabel?.button?.type?.base?.pressed?.text,
+  '&.disabled': whitelabel?.button?.type?.base?.disabled?.text,
+
   '&.accent': whitelabel?.button?.type?.accent?.rest?.text,
   '&.accent:hover': whitelabel?.button?.type?.accent?.hover?.text,
   '&.accent:focus': whitelabel?.button?.type?.accent?.focus?.text,
   '&.accent:pressed': whitelabel?.button?.type?.accent?.pressed?.text,
-  '&.accent:disabled': whitelabel?.button?.type?.accent?.disabled?.text,
+  '&.accent.disabled': whitelabel?.button?.type?.accent?.disabled?.text,
 
   '&.default': whitelabel?.button?.type?.default?.rest?.text,
   '&.default:hover': whitelabel?.button?.type?.default?.hover?.text,
   '&.default:focus': whitelabel?.button?.type?.default?.focus?.text,
   '&.default:pressed': whitelabel?.button?.type?.default?.pressed?.text,
-  '&.default:disabled': whitelabel?.button?.type?.default?.disabled?.text,
+  '&.default.disabled': whitelabel?.button?.type?.default?.disabled?.text,
 
   '&.text': whitelabel?.button?.type?.text?.rest?.text,
   '&.text:hover': whitelabel?.button?.type?.text?.hover?.text,
   '&.text:focus': whitelabel?.button?.type?.text?.focus?.text,
   '&.text:pressed': whitelabel?.button?.type?.text?.pressed?.text,
-  '&.text:disabled': whitelabel?.button?.type?.text?.disabled?.text,
+  '&.text.disabled': whitelabel?.button?.type?.text?.disabled?.text,
 
   // ---------------------------------------------------------------------------
   // Size
@@ -125,11 +138,13 @@ const StyledText = styled.span({
   '&.xxx-large': whitelabel?.button?.size?.xxxLarge?.rest?.text,
 });
 
-const Button: FC<ButtonProps> = ({ text, type, size }) => {
-  const buttonStyle = [type, size || 'medium'].join(' ').trim();
+const Button: FC<ButtonProps> = ({ text, type, size, disabled }) => {
+  const buttonStyle = [type, size || 'medium', disabled ? 'disabled' : '']
+    .join(' ')
+    .trim();
 
   return (
-    <StyledButton type="submit" className={buttonStyle}>
+    <StyledButton type="submit" className={buttonStyle} disabled={disabled}>
       <StyledText className={buttonStyle}>{text}</StyledText>
     </StyledButton>
   );

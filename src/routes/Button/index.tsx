@@ -15,9 +15,14 @@ const ButtonRoute: FC = () => {
       </div>
       <div>
         Size
-        <Button type="accent" text="accent small" size="small" />
+        <Button type="accent" text="accent small" size="medium" />
         <Button type="default" text="default medium" size="medium" />
-        <Button type="text" text="text large" size="large" />
+        <Button type="text" text="text large" size="medium" />
+      </div>
+      <div>
+        Status
+        <Button type="accent" text="accent" size="medium" />
+        <Button type="accent" text="accent" size="medium" disabled />
       </div>
     </div>
   );
