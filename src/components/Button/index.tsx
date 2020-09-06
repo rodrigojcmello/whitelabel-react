@@ -1,6 +1,9 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import whitelabel from '../../whitelabel';
+import whitelabel, {
+  ButtonElementsAttributes,
+  ButtonSizeAttribute,
+} from '../../whitelabel';
 
 interface ButtonProps {
   text: string;
@@ -32,18 +35,40 @@ const StyledButton = styled.button({
   '&.xxx-large': whitelabel?.button?.size?.xxxLarge?.button,
 });
 
+const sizeExist = whitelabel?.button?.size;
+if (sizeExist) {
+  Object.keys(sizeExist).forEach((size) => {
+    Object.keys(sizeExist[size as ButtonSizeAttribute]).forEach((element) => {
+      if (sizeExist[size as ButtonSizeAttribute]) {
+        const elementExist =
+          sizeExist[size as ButtonSizeAttribute][
+            element as ButtonElementsAttributes
+          ];
+        if (elementExist) {
+          Object.keys(elementExist).forEach((property) => {
+            if (property === 'lineHeight') {
+              if (elementExist[property]) {
+                elementExist[property] = `${elementExist[property]}px`;
+              }
+            }
+          });
+        }
+      }
+    });
+  });
+}
+
 const StyledText = styled.span({
   fontFamily: '"Segoe UI", serif',
   fontStyle: 'normal',
   fontWeight: 'normal',
-  // fontSize: 14,
-  // lineHeight: 20,
 
   // Type
   '&.accent': whitelabel?.button?.type?.accent?.text,
   '&.default': whitelabel?.button?.type?.default?.text,
   '&.text': whitelabel?.button?.type?.text?.text,
 
+  // Size
   '&.xxx-small': whitelabel?.button?.size?.xxxSmall?.text,
   '&.xx-small': whitelabel?.button?.size?.xxSmall?.text,
   '&.x-small': whitelabel?.button?.size?.xSmall?.text,
