@@ -21,9 +21,7 @@ module.exports = (env = { NODE_ENV: '' }) => {
     devServer: !prod ? { historyApiFallback: true } : {},
     plugins: [
       new HtmlWebpackPlugin({ template: './index.html' }),
-      new MiniCssExtractPlugin({
-        filename: 'styles.css',
-      }),
+      new MiniCssExtractPlugin(),
       prod ? new CleanWebpackPlugin() : new webpack.ProgressPlugin(),
     ],
     resolve: {
@@ -41,8 +39,8 @@ module.exports = (env = { NODE_ENV: '' }) => {
                   ['@babel/preset-env', { targets: 'last 1 chrome version' }],
                   '@babel/preset-react',
                   '@babel/preset-typescript',
-                  'linaria/babel',
                 ],
+                plugins: ['@babel/plugin-proposal-optional-chaining'],
                 cacheDirectory: true,
               },
             },

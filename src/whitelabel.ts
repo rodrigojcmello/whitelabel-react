@@ -2,13 +2,32 @@ import { CSSObject } from 'styled-components';
 
 export type Styles = CSSObject;
 
+// Elements --------------------------------------------------------------------
+
 export type ButtonElementsAttributes = 'button' | 'text';
 
 type ButtonElements<T> = {
   [attr in ButtonElementsAttributes]: T;
 };
 
+// Status ----------------------------------------------------------------------
+
+export type ButtonStatusAttribute =
+  | 'rest'
+  | 'hover'
+  | 'focus'
+  | 'pressed'
+  | 'disabled';
+
+type ButtonStatusStyle<T> = {
+  [attr in ButtonStatusAttribute]: Partial<ButtonElements<T>>;
+};
+
+// Modifier Type ---------------------------------------------------------------
+
 export type ButtonTypeAttribute = 'accent' | 'default' | 'text';
+
+// Modifier Size ---------------------------------------------------------------
 
 export type ButtonSizeAttribute =
   | 'xxxSmall'
@@ -21,18 +40,20 @@ export type ButtonSizeAttribute =
   | 'xxLarge'
   | 'xxxLarge';
 
+// Modifiers -------------------------------------------------------------------
+
 type ButtonTypeStyle<T> = {
-  [attr in ButtonTypeAttribute]: Partial<ButtonElements<T>>;
+  [attr in ButtonTypeAttribute]: Partial<ButtonStatusStyle<T>>;
 };
 
 type ButtonSizeStyle<T> = {
-  [attr in ButtonSizeAttribute]: Partial<ButtonElements<T>>;
+  [attr in ButtonSizeAttribute]: Partial<ButtonStatusStyle<T>>;
 };
 
 interface WhiteLabel<T> {
   button?: {
-    type?: ButtonTypeStyle<T>;
-    size?: ButtonSizeStyle<T>;
+    type?: Partial<ButtonTypeStyle<T>>;
+    size?: Partial<ButtonSizeStyle<T>>;
   };
 }
 
@@ -40,82 +61,98 @@ const whitelabel: WhiteLabel<Styles> = {
   button: {
     type: {
       accent: {
-        button: {
-          backgroundColor: '#0078d4',
-          borderRadius: 2,
+        rest: {
+          button: {
+            backgroundColor: '#6200ee',
+            borderRadius: 4,
+          },
+          text: {
+            color: '#FFFFFF',
+            textTransform: 'uppercase',
+          },
         },
-        text: {
-          color: '#FFFFFF',
+        hover: {
+          button: {
+            backgroundColor: '#5E00E4',
+          },
         },
+        focus: {},
+        pressed: {},
+        disabled: {},
       },
       default: {
-        button: {
-          backgroundColor: '#efefef',
-          borderRadius: 2,
+        rest: {
+          button: {
+            backgroundColor: '#FFFFFF',
+            borderRadius: 4,
+            borderWidth: 1,
+            borderStyle: 'solid',
+            borderColor: '#0000001f',
+          },
+          text: {
+            color: '#6200ee',
+            textTransform: 'uppercase',
+          },
         },
-        text: {
-          color: '#000000',
+        hover: {
+          button: {
+            backgroundColor: '#6200ee0a',
+          },
         },
       },
       text: {
-        button: {
-          backgroundColor: '#ffffff00',
-        },
-        text: {
-          color: '#0078D4',
-          textDecorationLine: 'underline',
+        rest: {
+          button: {
+            backgroundColor: '#ffffff00',
+          },
+          text: {
+            color: '#6200ee',
+            textTransform: 'uppercase',
+          },
         },
       },
     },
     size: {
-      xxxSmall: {
-        button: {
-          color: 'red',
-        },
-        text: {
-          color: 'red',
-        },
-      },
-      xxSmall: {
-        button: {
-          color: 'red',
-        },
-      },
-      xSmall: {},
       small: {
-        button: {
-          minWidth: 80,
-        },
-        text: {
-          lineHeight: 20,
-          fontSize: 12,
+        rest: {
+          button: {
+            minWidth: 80,
+            height: 24,
+            paddingRight: 16,
+            paddingLeft: 16,
+          },
+          text: {
+            lineHeight: 20,
+            fontSize: 12,
+          },
         },
       },
       medium: {
-        button: {
-          minWidth: 120,
-          height: 32,
-          paddingRight: 16,
-          paddingLeft: 16,
-        },
-        text: {
-          lineHeight: 20,
-          fontSize: 14,
+        rest: {
+          button: {
+            minWidth: 120,
+            height: 36,
+            paddingRight: 16,
+            paddingLeft: 16,
+          },
+          text: {
+            lineHeight: 20,
+            fontSize: 14,
+          },
         },
       },
       large: {
-        button: {
-          minWidth: 200,
-          height: 42,
-        },
-        text: {
-          lineHeight: 20,
-          fontSize: 16,
+        rest: {
+          button: {
+            minWidth: 200,
+            height: 42,
+          },
+          text: {
+            lineHeight: 20,
+            fontSize: 16,
+          },
         },
       },
-      xLarge: {},
-      xxLarge: {},
-      xxxLarge: {},
     },
     // color: {},
   },
