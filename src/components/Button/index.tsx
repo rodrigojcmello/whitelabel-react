@@ -1,10 +1,12 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import whitelabel, {
+import {
   ButtonElementsAttributes,
   ButtonSizeAttribute,
   ButtonStatusAttribute,
 } from '../../whitelabel';
+// import whitelabel from '../../whitelabel-fluent';
+import whitelabel from '../../whitelabel-material-ui';
 
 interface ButtonProps {
   text: string;
@@ -51,11 +53,7 @@ const StyledButton = styled.button({
   // Type
   // ---------------------------------------------------------------------------
 
-  ...whitelabel?.button?.type?.base?.rest?.button,
-  '&:hover': whitelabel?.button?.type?.base?.hover?.button,
-  '&:focus': whitelabel?.button?.type?.base?.focus?.button,
-  '&:pressed': whitelabel?.button?.type?.base?.pressed?.button,
-  '&.disabled': whitelabel?.button?.type?.base?.disabled?.button,
+  ...whitelabel?.button?.base?.button,
 
   '&.accent': whitelabel?.button?.type?.accent?.rest?.button,
   '&.accent:hover': whitelabel?.button?.type?.accent?.hover?.button,
@@ -99,11 +97,7 @@ const StyledText = styled.span({
   // Type
   // ---------------------------------------------------------------------------
 
-  ...whitelabel?.button?.type?.base?.rest?.text,
-  '&:hover': whitelabel?.button?.type?.base?.hover?.text,
-  '&:focus': whitelabel?.button?.type?.base?.focus?.text,
-  '&:pressed': whitelabel?.button?.type?.base?.pressed?.text,
-  '&.disabled': whitelabel?.button?.type?.base?.disabled?.text,
+  ...whitelabel?.button?.base?.text,
 
   '&.accent': whitelabel?.button?.type?.accent?.rest?.text,
   '&.accent:hover': whitelabel?.button?.type?.accent?.hover?.text,
