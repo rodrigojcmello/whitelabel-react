@@ -4,15 +4,18 @@ const whitelabel: WhiteLabel<Styles> = {
   button: {
     base: {
       button: {
+        cursor: 'pointer',
         minWidth: 120,
         height: 32,
         paddingRight: 10,
         paddingLeft: 10,
         borderRadius: 2,
+        transition: 'all ease-in 0.2s',
       },
       text: {
         lineHeight: 20,
         fontSize: 14,
+        transition: 'all ease-in 0.2s',
       },
     },
     type: {
@@ -25,6 +28,17 @@ const whitelabel: WhiteLabel<Styles> = {
             color: '#FFFFFF',
           },
         },
+        hover: {
+          button: {
+            backgroundColor: '#429CE3',
+          },
+        },
+        focus: {
+          button: {
+            outline: 'none',
+            boxShadow: '0 0 0 2px black',
+          },
+        },
       },
       default: {
         rest: {
@@ -33,6 +47,17 @@ const whitelabel: WhiteLabel<Styles> = {
           },
           text: {
             color: '#000000',
+          },
+        },
+        hover: {
+          button: {
+            boxShadow: '0 0 0 2px red',
+          },
+        },
+        focus: {
+          button: {
+            outline: 'none',
+            boxShadow: '0 0 0 2px black',
           },
         },
       },
@@ -44,6 +69,11 @@ const whitelabel: WhiteLabel<Styles> = {
           text: {
             color: '#0078D4',
             textDecorationLine: 'underline',
+          },
+        },
+        focus: {
+          button: {
+            outline: 'none',
           },
         },
       },
