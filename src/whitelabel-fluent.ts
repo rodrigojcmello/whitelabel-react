@@ -4,12 +4,11 @@ const whitelabel: WhiteLabel<Styles> = {
   button: {
     base: {
       button: {
-        cursor: 'pointer',
         minWidth: 120,
         height: 32,
+        borderRadius: 2,
         paddingRight: 10,
         paddingLeft: 10,
-        borderRadius: 2,
         transition: 'all ease-in 0.2s',
       },
       text: {

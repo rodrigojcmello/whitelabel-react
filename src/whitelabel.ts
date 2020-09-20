@@ -4,7 +4,7 @@ export type Styles = CSSObject;
 
 // Elements --------------------------------------------------------------------
 
-export type ButtonElementsAttributes = 'button' | 'container' | 'text';
+export type ButtonElementsAttributes = 'block' | 'container' | 'text';
 
 type ButtonElements<T> = {
   [attribute in ButtonElementsAttributes]: T;

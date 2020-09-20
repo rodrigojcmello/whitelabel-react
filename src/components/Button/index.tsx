@@ -1,17 +1,9 @@
 import React, { FC } from 'react';
-import {
-  ButtonElementsAttributes,
-  ButtonSizeAttribute,
-  ButtonStatusAttribute,
-} from '../../whitelabel';
-import whitelabel from '../../whitelabel-fluent';
 import { StyledButton, StyledText } from './style';
-
-// import whitelabel from '../../whitelabel-material-ui';
 
 interface ButtonProps {
   text: string;
-  type: 'default' | 'accent' | 'text';
+  type: 'type1' | 'type2' | 'type3';
   size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
 }

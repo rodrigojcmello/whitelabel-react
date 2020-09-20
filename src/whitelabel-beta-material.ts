@@ -4,7 +4,7 @@ const whitelabel = {
       block: {
         interactivity: {
           rest: {
-            backgroundColor: '#0078d4',
+            backgroundColor: '#6200ee',
           },
           hover: {
             backgroundColor: '#429CE3',
@@ -15,9 +15,9 @@ const whitelabel = {
         },
         sizing: {
           medium: {
-            borderRadius: 2,
-            height: 32,
-            minWidth: 120,
+            borderRadius: 4,
+            height: 36,
+            minWidth: 80,
           },
         },
         validation: {
@@ -38,9 +38,9 @@ const whitelabel = {
         interactivity: {
           rest: {
             color: '#FFFFFF',
-            fontFamily: '"Segoe UI", serif',
+            fontFamily: '"Roboto-Medium", serif',
+            fontWeight: 400,
             fontStyle: 'normal',
-            fontWeight: 'normal',
           },
           hover: {},
           focus: {},
@@ -58,9 +58,9 @@ const whitelabel = {
         },
         sizing: {
           medium: {
-            paddingLeft: 10,
-            paddingRight: 10,
-            lineHeight: 20,
+            paddingLeft: 12,
+            paddingRight: 12,
+            lineHeight: 16,
             fontSize: 14,
           },
         },
@@ -74,7 +74,10 @@ const whitelabel = {
       block: {
         interactivity: {
           rest: {
-            backgroundColor: '#efefef',
+            backgroundColor: '#FFFFFF',
+            borderWidth: 1,
+            borderStyle: 'solid',
+            borderColor: '#0000001f',
           },
           hover: {
             backgroundColor: '#429CE3',
