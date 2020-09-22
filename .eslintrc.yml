@@ -78,6 +78,15 @@ overrides:
       # TypeScript: Ensure values returned from functions
       '@typescript-eslint/explicit-function-return-type': 1
 
+      # Disable input inside the label
+      jsx-a11y/label-has-associated-control:
+        - error
+        - labelComponents: ['StyledLabel']
+          labelAttributes: [ ]
+          controlComponents: ['StyledInput']
+          assert: either
+          depth: 25
+
       # ---------------------------------------------------------------------------
       # Overwritten rules
       # ---------------------------------------------------------------------------

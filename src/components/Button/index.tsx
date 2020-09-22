@@ -3,7 +3,7 @@ import { StyledButton, StyledText } from './style';
 
 interface ButtonProps {
   text: string;
-  type: 'type1' | 'type2' | 'type3';
+  type: 'accent' | 'default' | 'text';
   size?: 'small' | 'medium' | 'large';
   disabled?: boolean;
 }

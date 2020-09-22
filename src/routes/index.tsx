@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Summary from './Summary';
 import '../styles/global/main.scss';
 import ButtonRoute from './Button';
+import TextInputRoute from './TextInput';
 // import PostList from './Fetch/PostList';
 
 const App: FC = () => {
@@ -13,6 +14,7 @@ const App: FC = () => {
         <Route path="/" exact component={Summary} />
         <Route>
           <Route path="/button" exact component={ButtonRoute} />
+          <Route path="/text-input" exact component={TextInputRoute} />
         </Route>
         {/* <Route> */}
         {/*  <Route path="/fetch-post" exact component={PostList} /> */}
