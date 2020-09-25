@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import whitelabel from '../../whitelabel-beta-fluent';
+import whitelabel from '../../wl-win10.json';
 
-const blockAccent = whitelabel?.button?.accent?.block?.style;
-const blockDefault = whitelabel?.button?.default?.block?.style;
-const blockText = whitelabel?.button?.text?.block?.style;
+const blockAccent = whitelabel?.button?.accent?.block;
+const blockDefault = whitelabel?.button?.default?.block;
+const blockText = whitelabel?.button?.text?.block;
 
 export const StyledButton = styled.button({
   display: 'flex',
@@ -66,9 +66,9 @@ export const StyledButton = styled.button({
   '&.text.disabled': blockText?.validation?.disabled,
 });
 
-const textAccent = whitelabel?.button?.accent?.block?.elements?.text;
-const textDefault = whitelabel?.button?.default?.block?.elements?.text;
-const textText = whitelabel?.button?.text?.block?.elements?.text;
+const textAccent = whitelabel?.button?.accent?.text;
+const textDefault = whitelabel?.button?.default?.text;
+const textText = whitelabel?.button?.text?.text;
 
 export const StyledText = styled.span({
   // ---------------------------------------------------------------------------
@@ -76,10 +76,13 @@ export const StyledText = styled.span({
   // ---------------------------------------------------------------------------
 
   // Base
-  ...textAccent.base,
 
-  // interactivity
-  '&.accent': textAccent?.interactivity?.rest,
+  // Interactivity
+  '&.accent': {
+    ...textAccent.base,
+    ...textAccent?.interactivity?.rest,
+    lineHeight: `${textDefault.base.lineHeight}px`,
+  },
   '&.accent:hover': textAccent?.interactivity?.hover,
   '&.accent:focus': textAccent?.interactivity?.focus,
   '&.accent:pressed': textAccent?.interactivity?.pressed,
@@ -93,10 +96,13 @@ export const StyledText = styled.span({
   // ---------------------------------------------------------------------------
 
   // Base
-  ...textDefault.base,
 
-  // interactivity
-  '&.default': textDefault?.interactivity?.rest,
+  // Interactivity
+  '&.default': {
+    ...textDefault.base,
+    ...textDefault?.interactivity?.rest,
+    lineHeight: `${textDefault.base.lineHeight}px`,
+  },
   '&.default:hover': textDefault?.interactivity?.hover,
   '&.default:focus': textDefault?.interactivity?.focus,
   '&.default:pressed': textDefault?.interactivity?.pressed,
@@ -109,11 +115,12 @@ export const StyledText = styled.span({
   // Type 3 - Text
   // ---------------------------------------------------------------------------
 
-  // Base
-  ...textText.base,
-
-  // interactivity
-  '&.text': textText?.interactivity?.rest,
+  // Interactivity
+  '&.text': {
+    ...textText.base,
+    ...textText?.interactivity?.rest,
+    lineHeight: `${textDefault.base.lineHeight}px`,
+  },
   '&.text:hover': textText?.interactivity?.hover,
   '&.text:focus': textText?.interactivity?.focus,
   '&.text:pressed': textText?.interactivity?.pressed,
