@@ -17,20 +17,16 @@ interface ElementTextColor {
   fontColor?: string;
 }
 
-interface ElementText extends ElementTextColor {
-  fontFamily?: string;
+interface ElementTextSizing extends ElementTextColor {
   fontSize?: number;
-  fontStyle?: 'italic' | 'normal';
-  textDecorationLine?: 'none' | 'underline' | 'overline' | 'line-through';
   lineHeight?: number;
   weight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
 }
 
-interface ElementTextSizing {
-  fontSize?: number;
-  lineHeight?: number;
-  fontColor?: string;
-  weight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
+interface ElementText extends ElementTextColor, ElementTextSizing {
+  fontFamily?: string;
+  fontStyle?: 'italic' | 'normal';
+  textDecorationLine?: 'underline' | 'overline' | 'line-through';
 }
 
 type ButtonBlockElement = ElementBorder & ElementBackground;
