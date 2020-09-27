@@ -25,7 +25,10 @@ const windows10Fluent: ButtonType = {
             minWidth: 120,
           },
           large: {},
-          xLarge: {},
+          xLarge: {
+            height: 56,
+            minWidth: 300,
+          },
           xxLarge: {},
           xxxLarge: {},
         },
@@ -59,7 +62,10 @@ const windows10Fluent: ButtonType = {
           small: {},
           medium: {},
           large: {},
-          xLarge: {},
+          xLarge: {
+            fontSize: 20,
+            lineHeight: 24,
+          },
           xxLarge: {},
           xxxLarge: {},
         },

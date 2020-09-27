@@ -5,7 +5,16 @@ import TextElement from './elements/Text';
 interface ButtonProps {
   text: string;
   type: 'accent' | 'default' | 'text';
-  size?: 'small' | 'medium' | 'large';
+  size?:
+    | 'xxx-small'
+    | 'xx-small'
+    | 'x-small'
+    | 'small'
+    | 'medium'
+    | 'large'
+    | 'x-large'
+    | 'xx-large'
+    | 'xxx-large';
   disabled?: boolean;
 }
 
