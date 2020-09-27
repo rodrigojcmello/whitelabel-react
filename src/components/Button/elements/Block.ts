@@ -32,30 +32,37 @@ const BlockElement = styled.button({
     borderWidth:
       blockAccent?.interactivity?.rest?.borderWidth ||
       blockAccent?.base?.borderWidth,
+    borderColor:
+      blockAccent?.interactivity?.rest?.borderColor ||
+      blockAccent?.base?.borderColor,
   },
   '&.accent:hover': {
     backgroundColor: blockAccent?.interactivity?.hover?.backgroundColor,
     borderRadius: blockAccent?.interactivity?.hover?.borderRadius,
     borderStyle: blockAccent?.interactivity?.hover?.borderStyle,
     borderWidth: blockAccent?.interactivity?.hover?.borderWidth,
+    borderColor: blockAccent?.interactivity?.hover?.borderColor,
   },
   '&.accent:focus': {
     backgroundColor: blockAccent?.interactivity?.focus?.backgroundColor,
     borderRadius: blockAccent?.interactivity?.focus?.borderRadius,
     borderStyle: blockAccent?.interactivity?.focus?.borderStyle,
     borderWidth: blockAccent?.interactivity?.focus?.borderWidth,
+    borderColor: blockAccent?.interactivity?.focus?.borderColor,
   },
   '&.accent:pressed': {
     backgroundColor: blockAccent?.interactivity?.pressed?.backgroundColor,
     borderRadius: blockAccent?.interactivity?.pressed?.borderRadius,
     borderStyle: blockAccent?.interactivity?.pressed?.borderStyle,
     borderWidth: blockAccent?.interactivity?.pressed?.borderWidth,
+    borderColor: blockAccent?.interactivity?.pressed?.borderColor,
   },
   '&.accent:visited': {
     backgroundColor: blockAccent?.interactivity?.visited?.backgroundColor,
     borderRadius: blockAccent?.interactivity?.visited?.borderRadius,
     borderStyle: blockAccent?.interactivity?.visited?.borderStyle,
     borderWidth: blockAccent?.interactivity?.visited?.borderWidth,
+    borderColor: blockAccent?.interactivity?.visited?.borderColor,
   },
 
   // Validation
@@ -64,6 +71,7 @@ const BlockElement = styled.button({
     borderRadius: blockAccent?.validation?.disabled?.borderRadius,
     borderStyle: blockAccent?.validation?.disabled?.borderStyle,
     borderWidth: blockAccent?.validation?.disabled?.borderWidth,
+    borderColor: blockAccent?.validation?.disabled?.borderColor,
   },
 
   // Sizing
@@ -122,30 +130,37 @@ const BlockElement = styled.button({
     borderWidth:
       blockDefault?.interactivity?.rest?.borderWidth ||
       blockDefault?.base?.borderWidth,
+    borderColor:
+      blockDefault?.interactivity?.rest?.borderColor ||
+      blockDefault?.base?.borderColor,
   },
   '&.default:hover': {
     backgroundColor: blockDefault?.interactivity?.hover?.backgroundColor,
     borderRadius: blockDefault?.interactivity?.hover?.borderRadius,
     borderStyle: blockDefault?.interactivity?.hover?.borderStyle,
     borderWidth: blockDefault?.interactivity?.hover?.borderWidth,
+    borderColor: blockDefault?.interactivity?.hover?.borderColor,
   },
   '&.default:focus': {
     backgroundColor: blockDefault?.interactivity?.focus?.backgroundColor,
     borderRadius: blockDefault?.interactivity?.focus?.borderRadius,
     borderStyle: blockDefault?.interactivity?.focus?.borderStyle,
     borderWidth: blockDefault?.interactivity?.focus?.borderWidth,
+    borderColor: blockDefault?.interactivity?.focus?.borderColor,
   },
   '&.default:pressed': {
     backgroundColor: blockDefault?.interactivity?.pressed?.backgroundColor,
     borderRadius: blockDefault?.interactivity?.pressed?.borderRadius,
     borderStyle: blockDefault?.interactivity?.pressed?.borderStyle,
     borderWidth: blockDefault?.interactivity?.pressed?.borderWidth,
+    borderColor: blockDefault?.interactivity?.pressed?.borderColor,
   },
   '&.default:visited': {
     backgroundColor: blockDefault?.interactivity?.visited?.backgroundColor,
     borderRadius: blockDefault?.interactivity?.visited?.borderRadius,
     borderStyle: blockDefault?.interactivity?.visited?.borderStyle,
     borderWidth: blockDefault?.interactivity?.visited?.borderWidth,
+    borderColor: blockDefault?.interactivity?.visited?.borderColor,
   },
 
   // Validation
@@ -154,6 +169,7 @@ const BlockElement = styled.button({
     borderRadius: blockAccent?.validation?.disabled?.borderRadius,
     borderStyle: blockAccent?.validation?.disabled?.borderStyle,
     borderWidth: blockAccent?.validation?.disabled?.borderWidth,
+    borderColor: blockAccent?.validation?.disabled?.borderColor,
   },
 
   // Sizing
@@ -212,18 +228,23 @@ const BlockElement = styled.button({
     borderWidth:
       blockText?.interactivity?.rest?.borderWidth ||
       blockText?.base?.borderWidth,
+    borderColor:
+      blockText?.interactivity?.rest?.borderColor ||
+      blockText?.base?.borderColor,
   },
   '&.text:hover': {
     backgroundColor: blockText?.interactivity?.hover?.backgroundColor,
     borderRadius: blockText?.interactivity?.hover?.borderRadius,
     borderStyle: blockText?.interactivity?.hover?.borderStyle,
     borderWidth: blockText?.interactivity?.hover?.borderWidth,
+    borderColor: blockText?.interactivity?.hover?.borderColor,
   },
   '&.text:focus': {
     backgroundColor: blockText?.interactivity?.focus?.backgroundColor,
     borderRadius: blockText?.interactivity?.focus?.borderRadius,
     borderStyle: blockText?.interactivity?.focus?.borderStyle,
     borderWidth: blockText?.interactivity?.focus?.borderWidth,
+    borderColor: blockText?.interactivity?.focus?.borderColor,
   },
   '&.text:pressed': {
     backgroundColor: blockText?.interactivity?.pressed?.backgroundColor,
@@ -236,6 +257,7 @@ const BlockElement = styled.button({
     borderRadius: blockText?.interactivity?.visited?.borderRadius,
     borderStyle: blockText?.interactivity?.visited?.borderStyle,
     borderWidth: blockText?.interactivity?.visited?.borderWidth,
+    borderColor: blockText?.interactivity?.visited?.borderColor,
   },
 
   // Validation
@@ -244,6 +266,7 @@ const BlockElement = styled.button({
     borderRadius: blockText?.validation?.disabled?.borderRadius,
     borderStyle: blockText?.validation?.disabled?.borderStyle,
     borderWidth: blockText?.validation?.disabled?.borderWidth,
+    borderColor: blockText?.validation?.disabled?.borderColor,
   },
 
   // Sizing

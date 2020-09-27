@@ -1,45 +1,16 @@
-interface ElementBorder {
-  borderRadius?: number;
-  borderWidth?: number;
-  borderStyle?: 'solid';
-}
+import {
+  ElementBackground,
+  ElementBorder,
+  ElementDimensions,
+  ElementHorizontalPadding,
+  ElementText,
+  ElementTextColor,
+  ElementTextSizing,
+} from '../types';
 
-interface ElementBackground {
-  backgroundColor?: string;
-}
-
-interface ElementDimensions {
-  height?: number;
-  minWidth?: number;
-}
-
-interface ElementTextColor {
-  fontColor?: string;
-}
-
-interface ElementTextSizing extends ElementTextColor {
-  fontSize?: number;
-  lineHeight?: number;
-  fontWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
-}
-
-interface ElementHorizontalPadding {
-  paddingLeft?: number;
-  paddingRight?: number;
-}
-
-interface ElementText
-  extends ElementTextColor,
-    ElementTextSizing,
-    ElementHorizontalPadding {
-  fontFamily?: string;
-  fontStyle?: 'italic';
-  textDecorationLine?: 'underline' | 'overline' | 'line-through';
-}
+type ButtonTextElement = ElementText & ElementHorizontalPadding;
 
 type ButtonBlockElement = ElementBorder & ElementBackground;
-
-// -----------------------------------------------------------------------------
 
 export interface ButtonType {
   button?: {
@@ -69,7 +40,7 @@ export interface ButtonType {
         };
       };
       text: {
-        base: ElementText;
+        base: ButtonTextElement;
         interactivity?: {
           rest?: ElementTextColor;
           hover?: ElementTextColor;
@@ -119,7 +90,7 @@ export interface ButtonType {
         };
       };
       text: {
-        base: ElementText;
+        base: ButtonTextElement;
         interactivity?: {
           rest?: ElementTextColor;
           hover?: ElementTextColor;
@@ -169,7 +140,7 @@ export interface ButtonType {
         };
       };
       text: {
-        base: ElementText;
+        base: ButtonTextElement;
         interactivity?: {
           rest?: ElementTextColor;
           hover?: ElementTextColor;

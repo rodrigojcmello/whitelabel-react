@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
-import TextInput from '../../components/TextInput';
+import TextInputBox from '../../components/TextInputBox';
 
 const TextInputRoute: FC = () => {
   return (
     <div>
-      <TextInput type="type1" />
+      <TextInputBox type="label-on-top" />
     </div>
   );
 };

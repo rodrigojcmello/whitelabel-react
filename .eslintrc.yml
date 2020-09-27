@@ -81,9 +81,9 @@ overrides:
       # Disable input inside the label
       jsx-a11y/label-has-associated-control:
         - error
-        - labelComponents: ['StyledLabel']
+        - labelComponents: ['LabelElement']
           labelAttributes: [ ]
-          controlComponents: ['StyledInput']
+          controlComponents: ['InputElement']
           assert: either
           depth: 25
 
