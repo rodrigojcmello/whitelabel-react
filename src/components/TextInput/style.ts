@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import whitelabel from '../../whitelabel-beta-fluent';
+import whitelabel from '../../json/legacy/whitelabel-beta-fluent';
 
 export const StyledInput = styled.input({
   display: 'block',

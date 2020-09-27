@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
-import { StyledButton, StyledText } from './style';
+import BlockElement from './elements/Block';
+import TextElement from './elements/Text';
 
 interface ButtonProps {
   text: string;
@@ -14,11 +15,11 @@ const Button: FC<ButtonProps> = ({ text, type, size, disabled }) => {
     .trim();
 
   return (
-    <StyledButton type="submit" className={buttonStyle} disabled={disabled}>
+    <BlockElement type="submit" className={buttonStyle} disabled={disabled}>
       <span>
-        <StyledText className={buttonStyle}>{text}</StyledText>
+        <TextElement className={buttonStyle}>{text}</TextElement>
       </span>
-    </StyledButton>
+    </BlockElement>
   );
 };
 
