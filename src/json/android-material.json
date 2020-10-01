@@ -2,9 +2,9 @@
   "button": {
     "accent": {
       "block": {
-        "base": { "borderRadius": 2 },
+        "base": { "borderRadius": 16 },
         "interactivity": {
-          "rest": { "backgroundColor": "#0078d4" },
+          "rest": { "backgroundColor": "#6200ee" },
           "hover": { "backgroundColor": "#429CE3" },
           "focus": {},
           "pressed": {},
@@ -25,12 +25,12 @@
       },
       "text": {
         "base": {
-          "fontFamily": "\"Segoe UI\", serif",
+          "fontFamily": "\"Roboto-Medium\", serif",
           "fontWeight": 400,
           "fontSize": 14,
           "lineHeight": 20,
-          "paddingLeft": 10,
-          "paddingRight": 10
+          "paddingLeft": 16,
+          "paddingRight": 16
         },
         "interactivity": {
           "rest": { "fontColor": "#FFFFFF" },
@@ -55,9 +55,14 @@
     },
     "default": {
       "block": {
-        "base": { "borderRadius": 2 },
+        "base": {
+          "borderRadius": 16,
+          "borderWidth": 1,
+          "borderColor": "#6200ee",
+          "borderStyle": "solid"
+        },
         "interactivity": {
-          "rest": { "backgroundColor": "#efefef" },
+          "rest": { "backgroundColor": "#ffffff" },
           "hover": { "backgroundColor": "#429CE3" },
           "focus": {},
           "pressed": {},
@@ -123,11 +128,7 @@
         "validation": { "disabled": {} }
       },
       "text": {
-        "base": {
-          "lineHeight": 20,
-          "fontSize": 14,
-          "textDecorationLine": "underline"
-        },
+        "base": { "lineHeight": 20, "fontSize": 14 },
         "interactivity": {
           "rest": { "fontColor": "#0078D4" },
           "hover": {},
@@ -155,23 +156,47 @@
       "input": {
         "base": {
           "backgroundColor": "#FFFFFF",
-          "borderRadius": 2,
+          "borderRadius": 3.5,
           "borderWidth": 1,
           "borderStyle": "solid",
           "borderColor": "rgba(0, 0, 0, 0.6)",
           "fontSize": 14,
           "fontFamily": "Segoe UI",
           "lineHeight": 20,
-          "paddingLeft": 11,
-          "paddingRight": 11
+          "paddingLeft": 15,
+          "paddingRight": 15
         },
         "interactivity": {
           "focus": { "borderWidth": 1, "borderColor": "#0078D4" }
         },
-        "sizing": { "medium": { "height": 32, "minWidth": 120 } }
+        "sizing": { "medium": { "height": 54, "minWidth": 240 } }
       },
       "label": {
         "base": { "fontSize": 14, "fontFamily": "Segoe UI", "lineHeight": 20 }
+      }
+    },
+    "labelPlaceholder": {
+      "input": {
+        "base": {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 3.5,
+          "borderWidth": 1,
+          "borderStyle": "solid",
+          "borderColor": "rgba(0, 0, 0, 0.6)",
+          "fontSize": 14,
+          "fontFamily": "Segoe UI",
+          "lineHeight": 20,
+          "paddingLeft": 15,
+          "paddingRight": 15
+        },
+        "interactivity": {
+          "focus": { "borderWidth": 1, "borderColor": "#0078D4" }
+        },
+        "sizing": { "medium": { "height": 54, "minWidth": 240 } }
+      },
+      "label": {
+        "base": { "fontSize": 14, "fontFamily": "Segoe UI", "lineHeight": 20 },
+        "interactivity": { "focus": { "fontColor": "#0078D4" } }
       }
     }
   }
