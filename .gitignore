@@ -21,3 +21,5 @@ src/routes/style.css.d.ts
 
 # Release
 build
+
+.vercel

@@ -13,6 +13,7 @@ const BlockElement = styled.button({
   padding: 0,
   cursor: 'pointer',
   transition: 'all ease-in 0.2s',
+  width: '100% !important',
 
   // ---------------------------------------------------------------------------
   // Type 1 - Accent

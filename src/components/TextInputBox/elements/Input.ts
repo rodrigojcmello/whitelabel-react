@@ -11,6 +11,7 @@ const InputElement = styled.input({
   border: 0,
   padding: 0,
   outline: 'none',
+  width: '100%',
 
   // ---------------------------------------------------------------------------
   // Type 1 - Label on Top
