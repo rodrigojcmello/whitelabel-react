@@ -13,7 +13,7 @@ const androidMaterialDesign: Components = {
         },
         interactivity: {
           rest: { backgroundColor: '#6200ee' },
-          hover: { backgroundColor: '#429CE3' },
+          hover: { backgroundColor: '#6E16EF' },
           focus: {},
           pressed: {},
           visited: {},
@@ -79,12 +79,12 @@ const androidMaterialDesign: Components = {
         base: {
           borderRadius: 4,
           borderWidth: 1,
-          borderColor: '#6200ee',
+          borderColor: '#bcbcbc',
           borderStyle: 'solid',
         },
         interactivity: {
           rest: { backgroundColor: '#ffffff' },
-          hover: { backgroundColor: '#429CE3' },
+          hover: { backgroundColor: '#efebf5' },
           focus: {},
           pressed: {},
           visited: {},
@@ -117,7 +117,7 @@ const androidMaterialDesign: Components = {
           paddingRight: 16,
         },
         interactivity: {
-          rest: { fontColor: '#000000' },
+          rest: { fontColor: '#6200ee' },
           hover: {},
           focus: {},
           pressed: {},
@@ -202,7 +202,7 @@ const androidMaterialDesign: Components = {
           borderWidth: 1,
           borderStyle: 'solid',
           borderColor: 'rgba(0, 0, 0, 0.6)',
-          fontSize: 14,
+          fontSize: 16,
           fontFamily: 'Roboto',
           lineHeight: 20,
           paddingLeft: 15,
@@ -211,7 +211,7 @@ const androidMaterialDesign: Components = {
         interactivity: {
           focus: {
             borderWidth: 1,
-            borderColor: '#0078D4',
+            borderColor: '#6200ee',
           },
         },
         sizing: {
@@ -237,7 +237,7 @@ const androidMaterialDesign: Components = {
           borderWidth: 1,
           borderStyle: 'solid',
           borderColor: 'rgba(0, 0, 0, 0.6)',
-          fontSize: 14,
+          fontSize: 16,
           fontFamily: 'Roboto',
           lineHeight: 20,
           paddingLeft: 15,
@@ -246,7 +246,7 @@ const androidMaterialDesign: Components = {
         interactivity: {
           focus: {
             borderWidth: 1,
-            borderColor: '#0078D4',
+            borderColor: '#6200ee',
           },
         },
         sizing: {
@@ -264,7 +264,7 @@ const androidMaterialDesign: Components = {
         },
         interactivity: {
           focus: {
-            fontColor: '#0078D4',
+            fontColor: '#6200ee',
           },
         },
       },

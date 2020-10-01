@@ -81,7 +81,7 @@ const windows10Fluent: Components = {
         },
         interactivity: {
           rest: { backgroundColor: '#efefef' },
-          hover: { backgroundColor: '#429CE3' },
+          hover: { backgroundColor: '#e6e6e6' },
           focus: {},
           pressed: {},
           visited: {},

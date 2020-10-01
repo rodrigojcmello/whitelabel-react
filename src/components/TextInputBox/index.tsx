@@ -10,10 +10,17 @@ interface ButtonProps {
   size?: 'small' | 'medium' | 'large';
   placeholder?: string;
   hint?: string;
+  label: string;
   // disabled?: boolean;
 }
 
-const TextInputBox: FC<ButtonProps> = ({ type, size, placeholder, hint }) => {
+const TextInputBox: FC<ButtonProps> = ({
+  type,
+  label,
+  size,
+  placeholder,
+  hint,
+}) => {
   const [value, setValue] = useState('');
   const [focus, setFocus] = useState(false);
 

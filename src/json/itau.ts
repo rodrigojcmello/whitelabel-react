@@ -226,6 +226,48 @@ const itau: Components = {
         },
       },
     },
+    labelPlaceholder: {
+      input: {
+        base: {
+          backgroundColor: '#FFFFFF',
+          borderWidth: 1,
+          fontSize: 14,
+          fontFamily: 'Segoe UI',
+          lineHeight: 20,
+          borderStyle: 'solid',
+          borderColor: '#89837F',
+          paddingLeft: 12,
+          paddingRight: 12,
+          borderRadius: 4,
+        },
+        interactivity: {
+          focus: {
+            borderWidth: 1,
+            borderColor: '#EC7000',
+          },
+        },
+        sizing: {
+          medium: {
+            height: 32,
+            minWidth: 120,
+          },
+        },
+      },
+      label: {
+        base: {
+          fontSize: 14,
+          fontFamily: 'Segoe UI',
+          lineHeight: 20,
+          paddingLeft: 10,
+          paddingRight: 10,
+        },
+        interactivity: {
+          focus: {
+            fontColor: '#EC7000',
+          },
+        },
+      },
+    },
   },
 };
 

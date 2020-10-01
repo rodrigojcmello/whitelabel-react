@@ -45,13 +45,25 @@ module.exports = (env = { NODE_ENV: '' }) => {
           ],
         },
         {
-          test: /\.(png|jpe?g|gif|woff2?|eot|ttf|otf|webp)$/i,
+          test: /\.(png|jpe?g|gif|woff2?|eot|otf|webp)$/i,
           use: 'file-loader',
         },
+        // {
+        //   test: /\.ttf$/,
+        //   use: [
+        //     {
+        //       loader: 'ttf-loader',
+        //       options: {
+        //         name: './public/[hash].[ext]',
+        //       },
+        //     },
+        //   ],
+        // },
         {
           test: /\.module.s?css$/,
           use: [
-            MiniCssExtractPlugin.loader,
+            // MiniCssExtractPlugin.loader,
+            'style-loader',
             'css-modules-typescript-loader',
             {
               loader: 'css-loader',
@@ -75,7 +87,7 @@ module.exports = (env = { NODE_ENV: '' }) => {
         {
           test: /^((?!\.module).)*s?css$/,
           use: [
-            MiniCssExtractPlugin.loader,
+            'style-loader',
             'css-loader',
             {
               loader: 'postcss-loader',
