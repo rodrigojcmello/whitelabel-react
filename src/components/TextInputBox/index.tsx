@@ -23,7 +23,7 @@ const TextInputBox: FC<ButtonProps> = ({ type, size, placeholder, hint }) => {
   return (
     <BlockElement className={elementState}>
       <LabelElement htmlFor={hash} className={elementState}>
-        Label
+        {label}
       </LabelElement>
       <InputElement
         type="text"

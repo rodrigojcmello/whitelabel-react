@@ -9,7 +9,7 @@ const androidMaterialDesign: Components = {
     accent: {
       block: {
         base: {
-          borderRadius: 16,
+          borderRadius: 4,
         },
         interactivity: {
           rest: { backgroundColor: '#6200ee' },
@@ -24,7 +24,7 @@ const androidMaterialDesign: Components = {
           xSmall: {},
           small: {},
           medium: {
-            height: 32,
+            height: 36,
             minWidth: 120,
           },
           large: {},
@@ -41,8 +41,8 @@ const androidMaterialDesign: Components = {
       },
       text: {
         base: {
-          fontFamily: '"Roboto-Medium", serif',
-          fontWeight: 400,
+          fontFamily: 'Roboto, serif',
+          fontWeight: 500,
           fontSize: 14,
           lineHeight: 20,
           paddingLeft: 16,
@@ -77,7 +77,7 @@ const androidMaterialDesign: Components = {
     default: {
       block: {
         base: {
-          borderRadius: 16,
+          borderRadius: 4,
           borderWidth: 1,
           borderColor: '#6200ee',
           borderStyle: 'solid',
@@ -95,7 +95,7 @@ const androidMaterialDesign: Components = {
           xSmall: {},
           small: {},
           medium: {
-            height: 32,
+            height: 36,
             minWidth: 120,
           },
           large: {},
@@ -108,7 +108,14 @@ const androidMaterialDesign: Components = {
         },
       },
       text: {
-        base: { lineHeight: 20, fontSize: 14 },
+        base: {
+          fontFamily: 'Roboto, serif',
+          fontWeight: 500,
+          fontSize: 14,
+          lineHeight: 20,
+          paddingLeft: 16,
+          paddingRight: 16,
+        },
         interactivity: {
           rest: { fontColor: '#000000' },
           hover: {},
@@ -134,7 +141,7 @@ const androidMaterialDesign: Components = {
     },
     text: {
       block: {
-        base: { borderRadius: 2 },
+        base: { borderRadius: 4 },
         interactivity: {
           rest: { backgroundColor: '#ffffff00' },
           hover: { backgroundColor: '#429CE3' },
@@ -196,7 +203,7 @@ const androidMaterialDesign: Components = {
           borderStyle: 'solid',
           borderColor: 'rgba(0, 0, 0, 0.6)',
           fontSize: 14,
-          fontFamily: 'Segoe UI',
+          fontFamily: 'Roboto',
           lineHeight: 20,
           paddingLeft: 15,
           paddingRight: 15,
@@ -217,7 +224,7 @@ const androidMaterialDesign: Components = {
       label: {
         base: {
           fontSize: 14,
-          fontFamily: 'Segoe UI',
+          fontFamily: 'Roboto',
           lineHeight: 20,
         },
       },
@@ -231,7 +238,7 @@ const androidMaterialDesign: Components = {
           borderStyle: 'solid',
           borderColor: 'rgba(0, 0, 0, 0.6)',
           fontSize: 14,
-          fontFamily: 'Segoe UI',
+          fontFamily: 'Roboto',
           lineHeight: 20,
           paddingLeft: 15,
           paddingRight: 15,
@@ -252,7 +259,7 @@ const androidMaterialDesign: Components = {
       label: {
         base: {
           fontSize: 14,
-          fontFamily: 'Segoe UI',
+          fontFamily: 'Roboto',
           lineHeight: 20,
         },
         interactivity: {

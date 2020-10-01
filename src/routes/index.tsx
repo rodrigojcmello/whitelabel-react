@@ -1,6 +1,8 @@
 import React, { FC, ReactElement } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
+import '../styles/assets/roboto/roboto.css';
+import '../styles/assets/segoe-ui/segoe-ui.css';
 // import Summary from './Summary';
 // import '../styles/global/main.scss';
 import ButtonRoute from './Button';
