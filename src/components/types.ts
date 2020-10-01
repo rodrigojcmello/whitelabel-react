@@ -3,6 +3,9 @@ export interface ElementBorder {
   borderWidth?: number;
   borderStyle?: 'solid';
   borderColor?: string;
+  borderBottomStyle?: 'solid';
+  borderBottomWidth?: number;
+  borderBottomColor?: string;
 }
 
 export interface ElementBackground {

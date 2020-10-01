@@ -4,8 +4,11 @@ import TextInputBox from '../../components/TextInputBox';
 const TextInputRoute: FC = () => {
   return (
     <div>
-      <TextInputBox type="label-on-top" />
-      <TextInputBox type="label-placeholder" />
+      <TextInputBox
+        type="label-on-top"
+        hint="lorem ipsum dolor sit amet"
+        placeholder="placeholder"
+      />
     </div>
   );
 };

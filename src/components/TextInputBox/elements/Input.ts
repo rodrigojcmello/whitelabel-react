@@ -35,6 +35,15 @@ const InputElement = styled.input({
     borderColor:
       labelLabelOnTop?.interactivity?.rest?.borderColor ||
       labelLabelOnTop?.base?.borderColor,
+    borderBottomStyle:
+      labelLabelOnTop?.interactivity?.rest?.borderBottomStyle ||
+      labelLabelOnTop?.base?.borderBottomStyle,
+    borderBottomColor:
+      labelLabelOnTop?.interactivity?.rest?.borderBottomColor ||
+      labelLabelOnTop?.base?.borderBottomColor,
+    borderBottomWidth:
+      labelLabelOnTop?.interactivity?.rest?.borderBottomWidth ||
+      labelLabelOnTop?.base?.borderBottomWidth,
 
     // Horizontal Padding
     paddingLeft: labelLabelOnTop?.base?.paddingLeft,

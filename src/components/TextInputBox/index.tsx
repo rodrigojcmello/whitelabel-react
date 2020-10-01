@@ -2,16 +2,18 @@ import React, { FC, useState } from 'react';
 import LabelElement from './elements/Label';
 import InputElement from './elements/Input';
 import BlockElement from './elements/Block';
+import HintElement from './elements/Hint';
 
 interface ButtonProps {
   // text: string;
   type: 'label-on-top' | 'label-placeholder' | 'label-inline';
   size?: 'small' | 'medium' | 'large';
-  label: string;
+  placeholder?: string;
+  hint?: string;
   // disabled?: boolean;
 }
 
-const TextInputBox: FC<ButtonProps> = ({ type, size, label }) => {
+const TextInputBox: FC<ButtonProps> = ({ type, size, placeholder, hint }) => {
   const [value, setValue] = useState('');
   const [focus, setFocus] = useState(false);
 
@@ -28,6 +30,7 @@ const TextInputBox: FC<ButtonProps> = ({ type, size, label }) => {
         id={hash}
         value={value}
         className={elementState}
+        placeholder={placeholder}
         onFocus={() => {
           setFocus(true);
         }}
@@ -38,6 +41,7 @@ const TextInputBox: FC<ButtonProps> = ({ type, size, label }) => {
           setValue(event.target.value);
         }}
       />
+      <HintElement>{hint}</HintElement>
     </BlockElement>
   );
 };
