@@ -7,10 +7,11 @@ interface ButtonProps {
   // text: string;
   type: 'label-on-top' | 'label-placeholder' | 'label-inline';
   size?: 'small' | 'medium' | 'large';
+  label: string;
   // disabled?: boolean;
 }
 
-const TextInputBox: FC<ButtonProps> = ({ type, size }) => {
+const TextInputBox: FC<ButtonProps> = ({ type, size, label }) => {
   const [value, setValue] = useState('');
   const [focus, setFocus] = useState(false);
 
@@ -20,7 +21,7 @@ const TextInputBox: FC<ButtonProps> = ({ type, size }) => {
   return (
     <BlockElement className={elementState}>
       <LabelElement htmlFor={hash} className={elementState}>
-        Label
+        {label}
       </LabelElement>
       <InputElement
         type="text"

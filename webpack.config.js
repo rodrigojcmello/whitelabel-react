@@ -44,46 +44,50 @@ module.exports = (env = { NODE_ENV: '' }) => {
             },
           ],
         },
-        // {
-        //   test: /\.module.s?css$/,
-        //   use: [
-        //     MiniCssExtractPlugin.loader,
-        //     'css-modules-typescript-loader',
-        //     {
-        //       loader: 'css-loader',
-        //       options: {
-        //         modules: {
-        //           localIdentName: prod ? '[hash:base64:5]' : '[local]',
-        //         },
-        //       },
-        //     },
-        //     {
-        //       loader: 'postcss-loader',
-        //       options: {
-        //         postcssOptions: {
-        //           plugins: ['autoprefixer'],
-        //         },
-        //       },
-        //     },
-        //     'sass-loader',
-        //   ],
-        // },
-        // {
-        //   test: /^((?!\.module).)*s?css$/,
-        //   use: [
-        //     MiniCssExtractPlugin.loader,
-        //     'css-loader',
-        //     {
-        //       loader: 'postcss-loader',
-        //       options: {
-        //         postcssOptions: {
-        //           plugins: ['autoprefixer'],
-        //         },
-        //       },
-        //     },
-        //     'sass-loader',
-        //   ],
-        // },
+        {
+          test: /\.(png|jpe?g|gif|woff2?|eot|ttf|otf|webp)$/i,
+          use: 'file-loader',
+        },
+        {
+          test: /\.module.s?css$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-modules-typescript-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                modules: {
+                  localIdentName: prod ? '[hash:base64:5]' : '[local]',
+                },
+              },
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: ['autoprefixer'],
+                },
+              },
+            },
+            'sass-loader',
+          ],
+        },
+        {
+          test: /^((?!\.module).)*s?css$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: ['autoprefixer'],
+                },
+              },
+            },
+            'sass-loader',
+          ],
+        },
       ],
     },
   };

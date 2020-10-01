@@ -219,6 +219,41 @@ const windows10Fluent: Components = {
         },
       },
     },
+    labelPlaceholder: {
+      input: {
+        base: {
+          backgroundColor: '#FFFFFF',
+          borderRadius: 2,
+          borderWidth: 1,
+          borderStyle: 'solid',
+          borderColor: 'rgba(0, 0, 0, 0.6)',
+          fontSize: 14,
+          fontFamily: 'Segoe UI',
+          lineHeight: 20,
+          paddingLeft: 11,
+          paddingRight: 11,
+        },
+        interactivity: {
+          focus: {
+            borderWidth: 1,
+            borderColor: '#0078D4',
+          },
+        },
+        sizing: {
+          medium: {
+            height: 32,
+            minWidth: 120,
+          },
+        },
+      },
+      label: {
+        base: {
+          fontSize: 14,
+          fontFamily: 'Segoe UI',
+          lineHeight: 20,
+        },
+      },
+    },
   },
 };
 
