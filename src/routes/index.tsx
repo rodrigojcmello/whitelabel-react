@@ -1,17 +1,18 @@
 import React, { FC, ReactElement } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import Summary from './Summary';
+// import Summary from './Summary';
 // import '../styles/global/main.scss';
 import ButtonRoute from './Button';
 import TextInputRoute from './TextInput';
+import MainRoute from './Main';
 // import PostList from './Fetch/PostList';
 
 const App: FC = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={Summary} />
+        <Route path="/" exact component={MainRoute} />
         <Route>
           <Route path="/button" exact component={ButtonRoute} />
           <Route path="/text-input" exact component={TextInputRoute} />
