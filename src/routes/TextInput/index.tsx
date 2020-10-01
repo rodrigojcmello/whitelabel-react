@@ -5,6 +5,7 @@ const TextInputRoute: FC = () => {
   return (
     <div>
       <TextInputBox type="label-on-top" />
+      <TextInputBox type="label-placeholder" />
     </div>
   );
 };

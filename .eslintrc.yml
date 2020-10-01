@@ -73,7 +73,7 @@ overrides:
       # ---------------------------------------------------------------------------
 
       # JavaScript: Limit 300 lines per file
-      max-lines: 1
+#      max-lines: 1
 
       # TypeScript: Ensure values returned from functions
       '@typescript-eslint/explicit-function-return-type': 1

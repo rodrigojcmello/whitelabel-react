@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { windows10Fluent as whitelabel } from '../../../json/json';
+import styledConfig from '../../../json/json';
 
-const blockAccent = whitelabel?.button?.accent?.block;
-const blockDefault = whitelabel?.button?.default?.block;
-const blockText = whitelabel?.button?.text?.block;
+const blockAccent = styledConfig?.button?.accent?.block;
+const blockDefault = styledConfig?.button?.default?.block;
+const blockText = styledConfig?.button?.text?.block;
 
 const BlockElement = styled.button({
   display: 'flex',

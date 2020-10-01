@@ -2,7 +2,7 @@ import React, { FC, ReactElement } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import Summary from './Summary';
-import '../styles/global/main.scss';
+// import '../styles/global/main.scss';
 import ButtonRoute from './Button';
 import TextInputRoute from './TextInput';
 // import PostList from './Fetch/PostList';

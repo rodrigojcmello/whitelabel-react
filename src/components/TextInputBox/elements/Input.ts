@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { windows10Fluent as whitelabel } from '../../../json/json';
-// import whitelabel from '../../../json/legacy/whitelabel-beta-fluent';
+import styledConfig from '../../../json/json';
 
-const labelLabelOnTop = whitelabel.textInputBox?.labelOnTop?.input;
+const labelLabelOnTop = styledConfig.textInputBox?.labelOnTop?.input;
+const labelLabelPlaceholder =
+  styledConfig.textInputBox?.labelPlaceholder?.input;
 
 const InputElement = styled.input({
   display: 'block',
@@ -124,6 +125,126 @@ const InputElement = styled.input({
   '&.label-on-top.xxx-large': {
     height: labelLabelOnTop?.sizing?.xxxLarge?.height,
     minWidth: labelLabelOnTop?.sizing?.xxxLarge?.minWidth,
+  },
+
+  // ---------------------------------------------------------------------------
+  // Type 2 - Label Placeholder
+  // ---------------------------------------------------------------------------
+
+  // Interactivity
+  '&.label-placeholder': {
+    // Box
+    backgroundColor:
+      labelLabelPlaceholder?.interactivity?.rest?.backgroundColor ||
+      labelLabelPlaceholder?.base?.backgroundColor,
+    borderRadius:
+      labelLabelPlaceholder?.interactivity?.rest?.borderRadius ||
+      labelLabelPlaceholder?.base?.borderRadius,
+    borderStyle:
+      labelLabelPlaceholder?.interactivity?.rest?.borderStyle ||
+      labelLabelPlaceholder?.base?.borderStyle,
+    borderWidth:
+      labelLabelPlaceholder?.interactivity?.rest?.borderWidth ||
+      labelLabelPlaceholder?.base?.borderWidth,
+    borderColor:
+      labelLabelPlaceholder?.interactivity?.rest?.borderColor ||
+      labelLabelPlaceholder?.base?.borderColor,
+
+    // Horizontal Padding
+    paddingLeft: labelLabelPlaceholder?.base?.paddingLeft,
+    paddingRight: labelLabelPlaceholder?.base?.paddingRight,
+
+    // Text
+    fontFamily: labelLabelPlaceholder?.base?.fontFamily,
+    fontSize: labelLabelPlaceholder?.base?.fontSize,
+    fontStyle: labelLabelPlaceholder?.base?.fontStyle,
+    fontWeight: labelLabelPlaceholder?.base?.fontWeight,
+    lineHeight: labelLabelPlaceholder?.base?.lineHeight
+      ? `${labelLabelPlaceholder.base.lineHeight}px`
+      : undefined,
+    color:
+      labelLabelPlaceholder?.interactivity?.rest?.fontColor ||
+      labelLabelPlaceholder?.base?.fontColor,
+    textDecorationLine: labelLabelPlaceholder?.base?.textDecorationLine,
+  },
+  '&.label-placeholder:hover': {
+    backgroundColor:
+      labelLabelPlaceholder?.interactivity?.hover?.backgroundColor,
+    borderRadius: labelLabelPlaceholder?.interactivity?.hover?.borderRadius,
+    borderStyle: labelLabelPlaceholder?.interactivity?.hover?.borderStyle,
+    borderWidth: labelLabelPlaceholder?.interactivity?.hover?.borderWidth,
+    borderColor: labelLabelPlaceholder?.interactivity?.hover?.borderColor,
+  },
+  '&.label-placeholder:focus': {
+    backgroundColor:
+      labelLabelPlaceholder?.interactivity?.focus?.backgroundColor,
+    borderRadius: labelLabelPlaceholder?.interactivity?.focus?.borderRadius,
+    borderStyle: labelLabelPlaceholder?.interactivity?.focus?.borderStyle,
+    borderWidth: labelLabelPlaceholder?.interactivity?.focus?.borderWidth,
+    borderColor: labelLabelPlaceholder?.interactivity?.focus?.borderColor,
+  },
+  '&.label-placeholder:pressed': {
+    backgroundColor:
+      labelLabelPlaceholder?.interactivity?.pressed?.backgroundColor,
+    borderRadius: labelLabelPlaceholder?.interactivity?.pressed?.borderRadius,
+    borderStyle: labelLabelPlaceholder?.interactivity?.pressed?.borderStyle,
+    borderWidth: labelLabelPlaceholder?.interactivity?.pressed?.borderWidth,
+    borderColor: labelLabelPlaceholder?.interactivity?.pressed?.borderColor,
+  },
+  '&.label-placeholder:visited': {
+    backgroundColor:
+      labelLabelPlaceholder?.interactivity?.visited?.backgroundColor,
+    borderRadius: labelLabelPlaceholder?.interactivity?.visited?.borderRadius,
+    borderStyle: labelLabelPlaceholder?.interactivity?.visited?.borderStyle,
+    borderColor: labelLabelPlaceholder?.interactivity?.visited?.borderColor,
+  },
+
+  // Validation
+  '&.label-placeholder.disabled': {
+    backgroundColor:
+      labelLabelPlaceholder?.validation?.disabled?.backgroundColor,
+    borderRadius: labelLabelPlaceholder?.validation?.disabled?.borderRadius,
+    borderStyle: labelLabelPlaceholder?.validation?.disabled?.borderStyle,
+    borderWidth: labelLabelPlaceholder?.validation?.disabled?.borderWidth,
+    borderColor: labelLabelPlaceholder?.validation?.disabled?.borderColor,
+  },
+
+  // Sizing
+  '&.label-placeholder.xxx-small': {
+    height: labelLabelPlaceholder?.sizing?.xxxSmall?.height,
+    minWidth: labelLabelPlaceholder?.sizing?.xxxSmall?.minWidth,
+  },
+  '&.label-placeholder.xx-small': {
+    height: labelLabelPlaceholder?.sizing?.xxSmall?.height,
+    minWidth: labelLabelPlaceholder?.sizing?.xxSmall?.minWidth,
+  },
+  '&.label-placeholder.x-small': {
+    height: labelLabelPlaceholder?.sizing?.xSmall?.height,
+    minWidth: labelLabelPlaceholder?.sizing?.xSmall?.minWidth,
+  },
+  '&.label-placeholder.small': {
+    height: labelLabelPlaceholder?.sizing?.small?.height,
+    minWidth: labelLabelPlaceholder?.sizing?.small?.minWidth,
+  },
+  '&.label-placeholder.medium': {
+    height: labelLabelPlaceholder?.sizing?.medium?.height,
+    minWidth: labelLabelPlaceholder?.sizing?.medium?.minWidth,
+  },
+  '&.label-placeholder.large': {
+    height: labelLabelPlaceholder?.sizing?.large?.height,
+    minWidth: labelLabelPlaceholder?.sizing?.large?.minWidth,
+  },
+  '&.label-placeholder.x-large': {
+    height: labelLabelPlaceholder?.sizing?.xLarge?.height,
+    minWidth: labelLabelPlaceholder?.sizing?.xLarge?.minWidth,
+  },
+  '&.label-placeholder.xx-large': {
+    height: labelLabelPlaceholder?.sizing?.xxLarge?.height,
+    minWidth: labelLabelPlaceholder?.sizing?.xxLarge?.minWidth,
+  },
+  '&.label-placeholder.xxx-large': {
+    height: labelLabelPlaceholder?.sizing?.xxxLarge?.height,
+    minWidth: labelLabelPlaceholder?.sizing?.xxxLarge?.minWidth,
   },
 });
 

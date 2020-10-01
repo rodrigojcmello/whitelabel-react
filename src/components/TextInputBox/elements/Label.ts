@@ -1,9 +1,11 @@
 import styled from 'styled-components';
-import { windows10Fluent as whitelabel } from '../../../json/json';
+import styledConfig from '../../../json/json';
 
-const labelLabelOnTop = whitelabel.textInputBox?.labelOnTop?.label;
+const labelLabelOnTop = styledConfig.textInputBox?.labelOnTop?.label;
+const labelLabelPlaceholder =
+  styledConfig.textInputBox?.labelPlaceholder?.label;
 
-const LabelElement = styled.span({
+const LabelElement = styled.label({
   // ---------------------------------------------------------------------------
   // Type 1 - Label on Top
   // ---------------------------------------------------------------------------
@@ -113,6 +115,127 @@ const LabelElement = styled.span({
     fontSize: labelLabelOnTop?.sizing?.xxxLarge?.fontSize,
     lineHeight: labelLabelOnTop?.sizing?.xxxLarge?.lineHeight
       ? `${labelLabelOnTop.sizing.xxxLarge.lineHeight}px`
+      : undefined,
+  },
+
+  // ---------------------------------------------------------------------------
+  // Type 2 - Label Placeholder
+  // ---------------------------------------------------------------------------
+
+  // Interactivity
+  '&.label-placeholder': {
+    position: 'absolute',
+    top: -10,
+    zIndex: 1,
+    left: 10,
+    backgroundColor: '#FFFFFF',
+    paddingRight: 8,
+    paddingLeft: 8,
+    display: 'inline-block',
+
+    fontFamily: labelLabelPlaceholder?.base?.fontFamily,
+    fontSize: labelLabelPlaceholder?.base?.fontSize,
+    fontStyle: labelLabelPlaceholder?.base?.fontStyle,
+    fontWeight: labelLabelPlaceholder?.base?.fontWeight,
+    lineHeight: labelLabelPlaceholder?.base?.lineHeight
+      ? `${labelLabelPlaceholder.base.lineHeight}px`
+      : undefined,
+    color:
+      labelLabelPlaceholder?.interactivity?.rest?.fontColor ||
+      labelLabelPlaceholder?.base?.fontColor,
+    textDecorationLine: labelLabelPlaceholder?.base?.textDecorationLine,
+    // paddingLeft: labelLabelPlaceholder?.base?.paddingLeft,
+    // paddingRight: labelLabelPlaceholder?.base?.paddingRight,
+  },
+  '&.label-placeholder.hover': {
+    color: labelLabelPlaceholder?.interactivity?.hover?.fontColor,
+  },
+  '&.label-placeholder.focus': {
+    color: labelLabelPlaceholder?.interactivity?.focus?.fontColor,
+  },
+  '&.label-placeholder.pressed': {
+    color: labelLabelPlaceholder?.interactivity?.pressed?.fontColor,
+  },
+  '&.label-placeholder.visited': {
+    color: labelLabelPlaceholder?.interactivity?.visited?.fontColor,
+  },
+
+  // Validation
+  '&.label-placeholder.disabled': {
+    color: labelLabelPlaceholder?.validation?.disabled?.fontColor,
+  },
+
+  // Sizing
+  '&.label-placeholder.xxx-small': {
+    color: labelLabelPlaceholder?.sizing?.xxxSmall?.fontColor,
+    fontWeight: labelLabelPlaceholder?.sizing?.xxxSmall?.fontWeight,
+    fontSize: labelLabelPlaceholder?.sizing?.xxxSmall?.fontSize,
+    lineHeight: labelLabelPlaceholder?.sizing?.xxxSmall?.lineHeight
+      ? `${labelLabelPlaceholder.sizing.xxxSmall.lineHeight}px`
+      : undefined,
+  },
+  '&.label-placeholder.xx-small': {
+    color: labelLabelPlaceholder?.sizing?.xxSmall?.fontColor,
+    fontWeight: labelLabelPlaceholder?.sizing?.xxSmall?.fontWeight,
+    fontSize: labelLabelPlaceholder?.sizing?.xxSmall?.fontSize,
+    lineHeight: labelLabelPlaceholder?.sizing?.xxSmall?.lineHeight
+      ? `${labelLabelPlaceholder.sizing.xxSmall.lineHeight}px`
+      : undefined,
+  },
+  '&.label-placeholder.x-small': {
+    color: labelLabelPlaceholder?.sizing?.xSmall?.fontColor,
+    fontWeight: labelLabelPlaceholder?.sizing?.xSmall?.fontWeight,
+    fontSize: labelLabelPlaceholder?.sizing?.xSmall?.fontSize,
+    lineHeight: labelLabelPlaceholder?.sizing?.xSmall?.lineHeight
+      ? `${labelLabelPlaceholder.sizing.xSmall.lineHeight}px`
+      : undefined,
+  },
+  '&.label-placeholder.small': {
+    color: labelLabelPlaceholder?.sizing?.small?.fontColor,
+    fontWeight: labelLabelPlaceholder?.sizing?.small?.fontWeight,
+    fontSize: labelLabelPlaceholder?.sizing?.small?.fontSize,
+    lineHeight: labelLabelPlaceholder?.sizing?.small?.lineHeight
+      ? `${labelLabelPlaceholder.sizing.small.lineHeight}px`
+      : undefined,
+  },
+  '&.label-placeholder.medium': {
+    color: labelLabelPlaceholder?.sizing?.medium?.fontColor,
+    fontWeight: labelLabelPlaceholder?.sizing?.medium?.fontWeight,
+    fontSize: labelLabelPlaceholder?.sizing?.medium?.fontSize,
+    lineHeight: labelLabelPlaceholder?.sizing?.medium?.lineHeight
+      ? `${labelLabelPlaceholder.sizing.medium.lineHeight}px`
+      : undefined,
+  },
+  '&.label-placeholder.large': {
+    color: labelLabelPlaceholder?.sizing?.large?.fontColor,
+    fontWeight: labelLabelPlaceholder?.sizing?.large?.fontWeight,
+    fontSize: labelLabelPlaceholder?.sizing?.large?.fontSize,
+    lineHeight: labelLabelPlaceholder?.sizing?.large?.lineHeight
+      ? `${labelLabelPlaceholder.sizing.large.lineHeight}px`
+      : undefined,
+  },
+  '&.label-placeholder.x-large': {
+    color: labelLabelPlaceholder?.sizing?.xLarge?.fontColor,
+    fontWeight: labelLabelPlaceholder?.sizing?.xLarge?.fontWeight,
+    fontSize: labelLabelPlaceholder?.sizing?.xLarge?.fontSize,
+    lineHeight: labelLabelPlaceholder?.sizing?.xLarge?.lineHeight
+      ? `${labelLabelPlaceholder.sizing.xLarge.lineHeight}px`
+      : undefined,
+  },
+  '&.label-placeholder.xx-large': {
+    color: labelLabelPlaceholder?.sizing?.xxLarge?.fontColor,
+    fontWeight: labelLabelPlaceholder?.sizing?.xxLarge?.fontWeight,
+    fontSize: labelLabelPlaceholder?.sizing?.xxLarge?.fontSize,
+    lineHeight: labelLabelPlaceholder?.sizing?.xxLarge?.lineHeight
+      ? `${labelLabelPlaceholder.sizing.xxLarge.lineHeight}px`
+      : undefined,
+  },
+  '&.label-placeholder.xxx-large': {
+    color: labelLabelPlaceholder?.sizing?.xxxLarge?.fontColor,
+    fontWeight: labelLabelPlaceholder?.sizing?.xxxLarge?.fontWeight,
+    fontSize: labelLabelPlaceholder?.sizing?.xxxLarge?.fontSize,
+    lineHeight: labelLabelPlaceholder?.sizing?.xxxLarge?.lineHeight
+      ? `${labelLabelPlaceholder.sizing.xxxLarge.lineHeight}px`
       : undefined,
   },
 });

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { windows10Fluent as whitelabel } from '../../../json/json';
+import styledConfig from '../../../json/json';
 
-const textAccent = whitelabel?.button?.accent?.text;
-const textDefault = whitelabel?.button?.default?.text;
-const textText = whitelabel?.button?.text?.text;
+const textAccent = styledConfig?.button?.accent?.text;
+const textDefault = styledConfig?.button?.default?.text;
+const textText = styledConfig?.button?.text?.text;
 
 const TextElement = styled.span({
   // ---------------------------------------------------------------------------

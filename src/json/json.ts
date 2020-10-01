@@ -1,3 +1,4 @@
-import windows10Fluent from './windows-10-fluent';
+// import styledConfig from './windows-10-fluent';
+import styledConfig from './android-material-design';
 
-export { windows10Fluent };
+export default styledConfig;

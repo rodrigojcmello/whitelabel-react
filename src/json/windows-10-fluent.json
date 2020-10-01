@@ -2,11 +2,7 @@
   "button": {
     "accent": {
       "block": {
-        "base": {
-          "borderRadius": 2,
-          "height": 32,
-          "minWidth": 120
-        },
+        "base": { "borderRadius": 2 },
         "interactivity": {
           "rest": { "backgroundColor": "#0078d4" },
           "hover": { "backgroundColor": "#429CE3" },
@@ -19,45 +15,31 @@
           "xxSmall": {},
           "xSmall": {},
           "small": {},
-          "medium": {},
+          "medium": { "height": 32, "minWidth": 120 },
           "large": {},
-          "xLarge": {},
+          "xLarge": { "height": 56, "minWidth": 300 },
           "xxLarge": {},
           "xxxLarge": {}
         },
-        "validation": {
-          "warning": {},
-          "danger": {},
-          "error": {},
-          "success": {},
-          "disabled": { "backgroundColor": "#C6C6C6" }
-        },
-        "waiting": { "content": {}, "action": {} }
+        "validation": { "disabled": { "backgroundColor": "#C6C6C6" } }
       },
       "text": {
         "base": {
           "fontFamily": "\"Segoe UI\", serif",
-          "fontStyle": "normal",
           "fontWeight": 400,
-          "paddingLeft": 10,
-          "paddingRight": 10,
+          "fontSize": 14,
           "lineHeight": 20,
-          "fontSize": 14
+          "paddingLeft": 10,
+          "paddingRight": 10
         },
         "interactivity": {
-          "rest": { "color": "#FFFFFF" },
+          "rest": { "fontColor": "#FFFFFF" },
           "hover": {},
           "focus": {},
           "pressed": {},
           "visited": {}
         },
-        "validation": {
-          "warning": {},
-          "danger": {},
-          "error": {},
-          "success": {},
-          "disabled": { "color": "#00000066" }
-        },
+        "validation": { "disabled": { "fontColor": "#00000066" } },
         "sizing": {
           "xxxSmall": {},
           "xxSmall": {},
@@ -65,20 +47,15 @@
           "small": {},
           "medium": {},
           "large": {},
-          "xLarge": {},
+          "xLarge": { "fontSize": 20, "lineHeight": 24 },
           "xxLarge": {},
           "xxxLarge": {}
-        },
-        "waiting": { "content": {}, "action": {} }
+        }
       }
     },
     "default": {
       "block": {
-        "base": {
-          "borderRadius": 2,
-          "height": 32,
-          "minWidth": 120
-        },
+        "base": { "borderRadius": 2 },
         "interactivity": {
           "rest": { "backgroundColor": "#efefef" },
           "hover": { "backgroundColor": "#429CE3" },
@@ -91,37 +68,24 @@
           "xxSmall": {},
           "xSmall": {},
           "small": {},
-          "medium": {},
+          "medium": { "height": 32, "minWidth": 120 },
           "large": {},
           "xLarge": {},
           "xxLarge": {},
           "xxxLarge": {}
         },
-        "validation": {
-          "warning": {},
-          "danger": {},
-          "error": {},
-          "success": {},
-          "disabled": {}
-        },
-        "waiting": { "content": {}, "action": {} }
+        "validation": { "disabled": {} }
       },
       "text": {
         "base": { "lineHeight": 20, "fontSize": 14 },
         "interactivity": {
-          "rest": { "color": "#000000" },
+          "rest": { "fontColor": "#000000" },
           "hover": {},
           "focus": {},
           "pressed": {},
           "visited": {}
         },
-        "validation": {
-          "warning": {},
-          "danger": {},
-          "error": {},
-          "success": {},
-          "disabled": {}
-        },
+        "validation": { "disabled": {} },
         "sizing": {
           "xxxSmall": {},
           "xxSmall": {},
@@ -132,13 +96,12 @@
           "xLarge": {},
           "xxLarge": {},
           "xxxLarge": {}
-        },
-        "waiting": { "content": {}, "action": {} }
+        }
       }
     },
     "text": {
       "block": {
-        "base": { "borderRadius": 2, "height": 32, "minWidth": 120 },
+        "base": { "borderRadius": 2 },
         "interactivity": {
           "rest": { "backgroundColor": "#ffffff00" },
           "hover": { "backgroundColor": "#429CE3" },
@@ -151,39 +114,88 @@
           "xxSmall": {},
           "xSmall": {},
           "small": {},
+          "medium": { "height": 32, "minWidth": 120 },
+          "large": {},
+          "xLarge": {},
+          "xxLarge": {},
+          "xxxLarge": {}
+        },
+        "validation": { "disabled": {} }
+      },
+      "text": {
+        "base": {
+          "lineHeight": 20,
+          "fontSize": 14,
+          "textDecorationLine": "underline"
+        },
+        "interactivity": {
+          "rest": { "fontColor": "#0078D4" },
+          "hover": {},
+          "focus": {},
+          "pressed": {},
+          "visited": {}
+        },
+        "sizing": {
+          "xxxSmall": {},
+          "xxSmall": {},
+          "xSmall": {},
+          "small": {},
           "medium": {},
           "large": {},
           "xLarge": {},
           "xxLarge": {},
           "xxxLarge": {}
         },
-        "validation": {
-          "warning": {},
-          "danger": {},
-          "error": {},
-          "success": {},
-          "disabled": {}
+        "validation": { "disabled": {} }
+      }
+    }
+  },
+  "textInputBox": {
+    "labelOnTop": {
+      "input": {
+        "base": {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 3.5,
+          "borderWidth": 1,
+          "borderStyle": "solid",
+          "borderColor": "rgba(0, 0, 0, 0.6)",
+          "fontSize": 14,
+          "fontFamily": "Segoe UI",
+          "lineHeight": 20,
+          "paddingLeft": 15,
+          "paddingRight": 15
         },
-        "waiting": { "content": {}, "action": {} }
-      },
-      "text": {
-        "base": { "lineHeight": 20, "fontSize": 14 },
         "interactivity": {
-          "rest": { "color": "#0078D4", "textDecorationLine": "underline" },
-          "hover": {},
-          "focus": {},
-          "pressed": {},
-          "visited": {}
+          "focus": { "borderWidth": 1, "borderColor": "#0078D4" }
         },
-        "validation": {
-          "warning": {},
-          "danger": {},
-          "error": {},
-          "success": {},
-          "disabled": {}
+        "sizing": { "medium": { "height": 54, "minWidth": 240 } }
+      },
+      "label": {
+        "base": { "fontSize": 14, "fontFamily": "Segoe UI", "lineHeight": 20 }
+      }
+    },
+    "labelPlaceholder": {
+      "input": {
+        "base": {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 3.5,
+          "borderWidth": 1,
+          "borderStyle": "solid",
+          "borderColor": "rgba(0, 0, 0, 0.6)",
+          "fontSize": 14,
+          "fontFamily": "Segoe UI",
+          "lineHeight": 20,
+          "paddingLeft": 15,
+          "paddingRight": 15
         },
-        "sizing": {},
-        "waiting": { "content": {}, "action": {} }
+        "interactivity": {
+          "focus": { "borderWidth": 1, "borderColor": "#0078D4" }
+        },
+        "sizing": { "medium": { "height": 54, "minWidth": 240 } }
+      },
+      "label": {
+        "base": { "fontSize": 14, "fontFamily": "Segoe UI", "lineHeight": 20 },
+        "interactivity": { "focus": { "fontColor": "#0078D4" } }
       }
     }
   }
