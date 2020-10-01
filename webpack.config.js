@@ -12,7 +12,7 @@ module.exports = (env = { NODE_ENV: '' }) => {
     entry: './src/routes/index.tsx',
     output: {
       filename: '[name].[chunkhash].js',
-      path: path.resolve(__dirname, 'build'),
+      path: path.resolve(__dirname, 'public'),
     },
     mode: prod ? 'production' : 'development',
     ...(prod ? { devtool: 'source-map' } : {}),
